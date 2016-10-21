@@ -1,0 +1,27 @@
+# include <stdio.h>
+
+int main()
+{
+	int i, j, p = 0;
+	int sum;
+
+	scanf("%d %d", &i, &j);
+
+	for(sum=0; i<=j; ++i)
+	{
+		printf("%5d", i);
+		++p;
+		if( p == 5)
+		{
+			printf("\n");
+			p = 0;
+		}
+		sum = sum + i;
+	}
+	
+	if(p != 0)
+		printf("\n");
+	printf("Sum = %d", sum);
+
+	return 0;
+}
