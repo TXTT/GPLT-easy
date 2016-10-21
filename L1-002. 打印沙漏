@@ -1,0 +1,37 @@
+# include <stdio.h>
+
+int main(void)
+{
+	char a;
+	int i, j, p, q;
+	int x = 1, y = 0;
+
+	scanf("%d %c", &i, &a);
+
+	for(j=3; x<=i; j+=2)
+	{
+		x = x + j*2;
+		++y;
+	}
+	x = x - (j-2)*2;
+	i = i - x;
+	q = 2*(y-1) + 1;
+	for(x = q; x>0; x-=2)
+	{
+		for(j = (q-x) / 2; j>0; j--)//注意右边没有空格= = ！
+			printf(" ");
+		for(p = x - j; p>0; --p)
+			printf("%c", a);
+		printf("\n");
+	}
+	for(x=3; x<=q; x+=2)
+	{
+		for(j = (q-x) / 2; j>0; j--)
+			printf(" ");
+		for(p = x - j; p>0; --p)
+			printf("%c", a);
+		printf("\n");
+	}
+	printf("%d\n", i);
+	return 0;
+}
