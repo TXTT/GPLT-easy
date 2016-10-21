@@ -1,0 +1,19 @@
+# include <stdio.h>
+
+int main()
+{
+	int i, j, m, n = 1;
+	int x = 0;
+	
+	scanf("%d", &i);
+	for(j=1; j<=i; j++)
+	{
+		for(m=1; m<=j; m++)
+			n = n * m;
+		x = x + n;
+		n = 1;
+	}
+	
+	printf("%d", x);
+	return 0;
+}
