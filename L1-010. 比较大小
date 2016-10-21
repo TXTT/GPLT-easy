@@ -1,0 +1,32 @@
+# include <stdio.h>
+
+int main()
+{
+	int i, j, q;
+	int p;
+
+	scanf("%d %d %d", &i, &j, &q);
+	if( i <= j )
+		if( i <= q )
+		{
+			printf("%d->", i);
+			if( q < j)
+				printf("%d->%d", q, j);
+			else
+				printf("%d->%d", j, q);
+		}
+		else
+			printf("%d->%d->%d", q, i, j);
+	else
+		if( i >= q )
+		{
+			if( j >= q )
+				printf("%d->%d->%d", q, j, i);
+			else
+				printf("%d->%d->%d", j, q, i);
+		}
+		else
+			printf("%d->%d->%d", j, i, q);
+
+	return 0;
+}
