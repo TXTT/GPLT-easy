@@ -1,0 +1,11 @@
+# include <stdio.h>
+
+int main()
+{
+	int i;
+
+	scanf("%d", &i);
+	printf("Celsius = %d\n", 5*(i-32) / 9);
+
+	return 0;
+}
