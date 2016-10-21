@@ -1,0 +1,27 @@
+# include <stdio.h>
+
+int main()
+{
+	int i;
+	char c;
+	char *s[10] = {"ling", "yi", "er", "san", "si", "wu", "liu", "qi", "ba", "jiu" };
+
+	while( (c = getchar()) != '\n')
+	{
+		if(c == '-')
+			printf("fu ");
+		else
+		{
+			i = c - '0';
+			printf("%s", s[i]);
+			while( (c = getchar()) != '\n')
+			{
+				i = c - '0';
+				printf(" %s", s[i]);
+			}
+			break;
+		}
+		
+	}
+	return 0;
+}
